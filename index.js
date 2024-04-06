@@ -8,6 +8,8 @@ app.get('/', (req, res)=>{
     res.send("hello world");
 })
 
+// Middleware to parse JSON bodies
+app.use(express.json());
 
 // Import the router file
 const authRouter = require('./routes/auth')
